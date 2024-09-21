@@ -2,13 +2,18 @@ from google.oauth2 import service_account
 from google.cloud import billing_v1
 from google.auth import default
 from google.protobuf.json_format import MessageToDict
+from google.auth.transport.requests import Request
 import json, requests
-import requests
+
 
 key_path = '/Users/egatchal/CloudExpert/pricingcheck-436202-f19db4cf7f31.json'
 
 credentials = service_account.Credentials.from_service_account_file(key_path)
-print(credentials.token)
+request = Request()
+
+# Refresh the credentials to get a new access token
+credentials.refresh(request)
+
 # client = billing_v1.CloudCatalogClient(credentials=credentials)
 
 # Set the service ID
