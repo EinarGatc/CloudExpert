@@ -7,16 +7,16 @@ import json, requests
 
 
 key_path = '/Users/egatchal/CloudExpert/pricingcheck-436202-f19db4cf7f31.json'
+scopes = ['https://www.googleapis.com/auth/cloud-billing.readonly']
 
-credentials = service_account.Credentials.from_service_account_file(key_path)
+credentials = service_account.Credentials.from_service_account_file(key_path, scopes=scopes)
+
 request = Request()
 
-# Refresh the credentials to get a new access token
 credentials.refresh(request)
 
-# client = billing_v1.CloudCatalogClient(credentials=credentials)
+access_token = credentials.token
 
-# Set the service ID
 service_id = 'services/6F81-5844-456A'
 
 # Prepare the request
@@ -28,10 +28,12 @@ headers = {
 
 # Make the request
 response = requests.get(url, headers=headers)
-
 # Check the response
 if response.status_code == 200:
     skus = response.json()
-    print(skus)
+    with open("GoogleSKUs.json", "w") as file:
+        json.dump(skus, file, indent=2)
 else:
     print(f'Error: {response.status_code} - {response.text}')
+
+print("Finished")
