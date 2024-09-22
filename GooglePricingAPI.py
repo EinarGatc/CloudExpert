@@ -31,7 +31,7 @@ response = requests.get(url, headers=headers)
 # Check the response
 if response.status_code == 200:
     skus = response.json()
-    with open("GoogleSKUs.json", "w") as file:
+    with open("GoogleServices.json", "w") as file:
         json.dump(skus, file, indent=2)
 else:
     print(f'Error: {response.status_code} - {response.text}')

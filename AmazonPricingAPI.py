@@ -15,5 +15,5 @@ client = boto3.client('pricing', config=my_config)
 # Retrieve product details
 response = client.get_products(ServiceCode='AmazonEC2') 
 
-with open("amazon.json", "w") as file:
+with open("AmazonServices.json", "w") as file:
     json.dump(response, file)
