@@ -14,6 +14,8 @@ client = boto3.client('pricing', config=my_config)
 
 # Retrieve product details
 response = client.get_products(ServiceCode='AmazonEC2') 
-
-with open("AmazonServices.json", "w") as file:
-    json.dump(response, file)
+priceList = response["PriceList"]
+for i in range(len(priceList)):
+    priceList[i] = eval(priceList[i])
+with open("AmazonServices.json", "w") as f:
+    json.dump(priceList, f, indent=2)
