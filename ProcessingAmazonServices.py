@@ -18,7 +18,11 @@ f.close()
 # print(services[0]["publicationDate"])
 
 def ExtractVmInfo(vm_dict):
-    # Extract relevant fields from the VM dictionary
+    """
+    Extract features from product attributes
+    vCPUs, Memory, Storage, OS, CS, InstanceType, RegionCode
+    """
+
     vmInfo = {
         "vCPUs": vm_dict["product"]["attributes"].get("vcpu", None),
         "Memory": vm_dict["product"]["attributes"].get("memory", None),
