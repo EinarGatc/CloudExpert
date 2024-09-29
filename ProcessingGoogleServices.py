@@ -6,5 +6,6 @@ f = open("GoogleServices.json", "r+")
 
 data = json.load(f)
 services = data["skus"]
+print(services)
 
 f.close()
