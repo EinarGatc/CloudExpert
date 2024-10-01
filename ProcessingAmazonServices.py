@@ -1,5 +1,6 @@
 """
 Python script to extract certain features from AWS EC2 Instance data
+Currently need to find shared traits among each json file
 """
 import json
 f = open("AmazonServices.json", "r+")
