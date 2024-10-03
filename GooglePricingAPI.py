@@ -1,3 +1,6 @@
+"""
+Code for accessing Googles Pricing API
+"""
 from google.oauth2 import service_account
 from google.cloud import billing_v1
 from google.auth import default
@@ -27,6 +30,7 @@ headers = {
 }
 
 # Make the request
+
 response = requests.get(url, headers=headers)
 # Check the response
 if response.status_code == 200:

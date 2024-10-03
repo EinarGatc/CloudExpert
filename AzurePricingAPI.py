@@ -1,3 +1,6 @@
+"""
+Code for accessing Azure's Pricing API
+"""
 import requests
 import json
 

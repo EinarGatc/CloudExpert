@@ -1,3 +1,7 @@
+"""
+Code for accessing Amazon Pricing API
+"""
+
 import boto3, json
 from botocore.config import Config
 
