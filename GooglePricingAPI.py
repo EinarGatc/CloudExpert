@@ -1,5 +1,5 @@
 """
-Code for accessing Googles Pricing API
+Code for accessing Googles Pricing API. Will delete soon
 """
 from google.oauth2 import service_account
 from google.cloud import billing_v1

@@ -1,5 +1,5 @@
 """
-Code for accessing Azure's Pricing API
+Code for accessing Azure's Pricing API. Will delete soon
 """
 import requests
 import json
