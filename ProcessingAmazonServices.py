@@ -1,6 +1,10 @@
 """
 Python script to extract certain features from AWS EC2 Instance data
 Currently need to find shared traits among each json file
+1. Find information on instances
+2. Store into database
+3. Create query to retreive instance with certain specifications
+4. Create model to choose best instance for a task
 """
 import json
 f = open("AmazonServices.json", "r+")
