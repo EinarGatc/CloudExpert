@@ -5,6 +5,7 @@ Currently need to find shared traits among each json file
 2. Store into database
 3. Create query to retreive instance with certain specifications
 4. Create model to choose best instance for a task
+5. possibly add other instance type from other platforms
 """
 import json
 f = open("AmazonServices.json", "r+")
