@@ -1,8 +1,11 @@
 """
 Python script to extract certain features from AWS EC2 Instance data
 Currently need to find shared traits among each json file
-1. Find information on instances
-2. Store into database
+1.  Find information on instances
+    a.  CPUs, Memory, Storage, Network Performance, Operating System, Physical Processors, 
+        Clock Speed, Instance Type, Instance Family,DedicatedEdbThroughput, Tenancy, 
+        Processs Features, EnhancedNetworkingSupported, Location, Region Code, Market Option,
+        PreInstalledSoftware
 3. Create query to retreive instance with certain specifications
 4. Create model to choose best instance for a task
 5. possibly add other instance type from other platforms
@@ -50,6 +53,6 @@ def ExtractVmInfo(vm_dict):
     }
     
     return vmInfo
-
-print(ExtractVmInfo(services[0]))
+print(services[0])
+# print(ExtractVmInfo(services[0]))
 
