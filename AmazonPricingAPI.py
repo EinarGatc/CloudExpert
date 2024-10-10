@@ -2,6 +2,7 @@
 Code for accessing Amazon Pricing API
 Im going to end up just doing amazon and helping undergraduate researchers compute big models
 Keep instance type, cpus, memory, cost, etc
+Get more data on instances
 """
 
 import boto3, json
